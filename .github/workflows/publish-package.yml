@@ -1,0 +1,24 @@
+name: Publish in Artifact Repository Releasable
+run-name: Checking if acceptance tests pass
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Testing
+    uses: Agile-visualizer-Team/VsCode-Extension-Acceptance/.github/workflows/tests.yml
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      # To use JFrog here
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
