@@ -1,0 +1,45 @@
+run-name: Pull request in a monolithic way
+name: Create a pull request CI/CD mono
+on:
+  push:
+   branches :
+    - '*'
+    - '!master'
+    - '!main'
+  workflow_dispatch:
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch
+        run: echo "${GITHUB_REF##*/}"
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+      - uses: shogo82148/actions-setup-perl@v1
+        with:
+            perl-version: '5.34'
+      - name: check commit
+        run : git show $GITHUB_SHA
+      - name: run script
+        run : ./commit_hook.pl $GITHUB_SHA
+      - name: setting enviroment variables
+        run : ./commit_hook.pl $GITHUB_SHA >> $GITHUB_ENV
+      - if: ${{ env.pull_request_commit == 'true' }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - if: ${{ env.pull_request_commit == 'true' }}
+        run: | 
+          sudo apt install python3-pip
+          pip3 install -r requirements.txt
+          pytest randomness/tests/
+      - if: ${{ env.pull_request_commit == 'true' }}
+        name: create pull_request
+        uses: devops-infra/action-pull-request@v0.5.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: main
+          title: ${{ env.title }}
+          body: ${{ env.body }}
+          reviewer: ${{ env.reviewer }}

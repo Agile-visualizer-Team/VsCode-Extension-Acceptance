@@ -1,0 +1,34 @@
+run-name: Checking if ${{ github.actor }} wants to create a pull_request :)
+name: Check for pull request commit
+on:
+  push:
+   branches :
+    - '*'
+    - '!master'
+    - '!main'
+  workflow_dispatch:
+jobs:
+  check_pull_request_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch
+        run: echo "echo ${GITHUB_REF##*/}"
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+      - uses: shogo82148/actions-setup-perl@v1
+        with:
+            perl-version: '5.34'
+      - name: check commit
+        run : git show $GITHUB_SHA
+      - name: run script
+        run : ./commit_hook.pl $GITHUB_SHA
+      - name: setting enviroment variables
+        run : ./commit_hook.pl $GITHUB_SHA >> $GITHUB_ENV
+      - if: ${{ env.pull_request_commit == 'true' }}
+        uses: Agile-visualizer-Team/TestRepo/.github/workflows/workflow_2.yml@develop
+        with:
+          title: ${{ env.title }}
+          body: ${{ env.body }}
+          reviewer: ${{ env.reviewer }}
+          token: ${{ secrets.GITHUB_TOKEN }}

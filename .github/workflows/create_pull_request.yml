@@ -1,0 +1,13 @@
+run-name: ${{ github.actor }} wants to create a pull_request :)
+name: Create pull request commit
+on:
+  workflow_dispatch:
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch
+        run: echo "echo ${GITHUB_REF##*/}"
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
