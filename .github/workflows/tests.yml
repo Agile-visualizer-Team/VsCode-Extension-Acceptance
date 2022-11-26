@@ -18,8 +18,8 @@ jobs:
         run : git show $GITHUB_SHA
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 
       - run: npm ci
         env:
-          NPM_AUTH_TOKEN: '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'
+          NPM_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       # - run: npm test
