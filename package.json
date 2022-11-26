@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@agile-visualizer-team/agile_visualizer_matrix_visualizaton": "npm:@Agile-visualizer-Team/agile_visualizer_matrix_visualizaton@^1.0.1",
+    "@agile-visualizer-team/hello-extension": "npm:@Agile-visualizer-Team/hello-extension@^0.0.1",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "sinon": "^14.0.2"

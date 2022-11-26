@@ -2,3 +2,5 @@ import { MatrixCreator } from "@agile-visualizer-team/agile_visualizer_matrix_vi
 let script = new MatrixCreator();
 
 script.run_script();
+
+import { MatrixCreator } from "@agile-visualizer-team/hello-extension/src/matrix_visualization";
