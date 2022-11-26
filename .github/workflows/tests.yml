@@ -18,7 +18,7 @@ jobs:
         run : git show $GITHUB_SHA
       - uses: actions/setup-node@v3
         with:
-          node-version: 
+          node-version: 16
       - run: npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
