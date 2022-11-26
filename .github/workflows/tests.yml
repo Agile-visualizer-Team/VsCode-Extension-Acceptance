@@ -21,5 +21,5 @@ jobs:
           node-version: 16
       - run: npm ci
         env:
-          NPM_AUTH_TOKEN: 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
+          NPM_AUTH_TOKEN: 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
       # - run: npm test
