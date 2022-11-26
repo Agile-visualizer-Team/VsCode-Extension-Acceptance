@@ -10,7 +10,6 @@ jobs:
     permissions:
       packages: read
       contents: read
-      actions: read
     steps:
       - uses: actions/checkout@v3
       - name: Check branch
