@@ -1,4 +1,4 @@
-// How to install package -> npm install @agile-visualizer-team/vscode-extension-playground
+// How to install package -> npm install @agile-visualizer-team/visualizer-asp
 import { MatrixCreator } from "@agile-visualizer-team/agile_visualizer_matrix_visualizaton/src/matrix_visualization.js";
 let script = new MatrixCreator();
 
