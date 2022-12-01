@@ -19,10 +19,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install @agile-visualizer-team/visualizer-asp@latest
+      - run: |
+         npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: npm ci
-        env:
-          NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      # - run: npm test
+      # - run: npm tests
