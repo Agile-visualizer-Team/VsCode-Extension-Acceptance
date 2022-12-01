@@ -22,9 +22,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/agile_visualizer_matrix_visualizaton": "npm:@Agile-visualizer-Team/agile_visualizer_matrix_visualizaton@^1.0.1",
-    "@agile-visualizer-team/visualizer-asp": "^0.0.1",
-    "@agile-visualizer-team/vscode-extension-playground": "npm:@Agile-visualizer-Team/vscode-extension-playground@^0.0.1",
+    "@agile-visualizer-team/visualizer-asp": "^0.0.2",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "sinon": "^14.0.2"
