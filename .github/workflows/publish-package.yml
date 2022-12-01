@@ -21,7 +21,5 @@ jobs:
       - run: npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      # To use JFrog here
-      # - run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    # Publishing on JFrog
+      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_node_modules/ avs_node_modules/visualizer-asp/

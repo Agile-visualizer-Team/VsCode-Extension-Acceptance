@@ -19,6 +19,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: npm update -g
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
