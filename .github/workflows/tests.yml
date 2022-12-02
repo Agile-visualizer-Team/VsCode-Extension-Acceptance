@@ -21,10 +21,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - name: check .npmrc
-        run: |
-          cat /home/runner/.npm/_logs/2022-12-02T10_17_03_104Z-debug-0.log
-        # cat ~/.npmrc
       # - run: |
       #     cat .cache
       #     cat .package
@@ -35,4 +31,8 @@ jobs:
          npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: check .npmrc
+        run: |
+          cat /home/runner/.npm/_logs/2022-12-02T10_17_03_104Z-debug-0.log
+        # cat ~/.npmrc
       # - run: npm tests
