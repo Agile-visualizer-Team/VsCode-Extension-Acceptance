@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
+      - run: |
+          npm install @agile-visualizer-team/visualizer-asp@latest
+          npm install
     # Publishing on JFrog
       - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_releasable-npm/ node_modules/visualizer-asp/
