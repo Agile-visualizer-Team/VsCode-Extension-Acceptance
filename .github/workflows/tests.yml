@@ -11,6 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
+      # TO DELETE
       - uses: actions/checkout@v3
       - name: Check branch
         run: echo "echo ${GITHUB_REF##*/}"
@@ -19,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: check .npmrc
+        run: cat ~/.npmrc
       - run: |
          npm ci
         env:
