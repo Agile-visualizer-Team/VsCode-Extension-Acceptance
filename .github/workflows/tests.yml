@@ -10,12 +10,10 @@ on:
 jobs:
 
   test:
-    permissions:
-      packages: write
-      contents: read
+    env:
+      NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     runs-on: ubuntu-22.04
     steps:
-      # TO DELETE
       - uses: actions/checkout@v3
       - name: Check branch
         run: echo "echo ${GITHUB_REF##*/}"
@@ -24,19 +22,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      # - run: |
-      #     cat .cache
-      #     cat .package
-      #     cat .package-lock
-      #     cat .npmrc
       - name: check .npmrc
         run: |
-          ls -a /home/runner/work/_temp/_github_workflow
+          ls -a /home/runner/work/_temp/
         # cat /home/runner/work/_temp/.npmrc
-      - run: |
-         npm ci
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        # cat ~/.npmrc
+      - run: npm ci
       # - run: npm tests
