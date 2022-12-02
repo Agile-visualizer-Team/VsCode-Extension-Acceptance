@@ -22,6 +22,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
+    "@agile-visualizer-team/visualizer-asp": "^0.0.3",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "sinon": "^14.0.2"

@@ -22,9 +22,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: check file in /home/runner/work/_temp/
-        run: |
-          ls -a /home/runner/work/_temp/
-        # cat /home/runner/work/_temp/.npmrc
       - run: npm install
       # - run: npm tests
