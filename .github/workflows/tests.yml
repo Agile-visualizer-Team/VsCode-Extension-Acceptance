@@ -21,12 +21,14 @@ jobs:
         with:
           node-version: 16
       - name: check .npmrc
-        run: cat ~/.npmrc
-      - run: |
-          cat .cache
-          cat .package
-          cat .package-lock
-          cat .npmrc
+        run: |
+          ls  ~
+        # cat ~/.npmrc
+      # - run: |
+      #     cat .cache
+      #     cat .package
+      #     cat .package-lock
+      #     cat .npmrc
 
       - run: |
          npm ci
