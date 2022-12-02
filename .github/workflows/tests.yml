@@ -22,7 +22,7 @@ jobs:
           node-version: 16
       - name: check .npmrc
         run: |
-          ls  ~
+          ls -a ~/.npm
         # cat ~/.npmrc
       # - run: |
       #     cat .cache
