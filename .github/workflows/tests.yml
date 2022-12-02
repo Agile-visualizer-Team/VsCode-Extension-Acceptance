@@ -36,6 +36,7 @@ jobs:
          cat /home/runner/.npm/_logs/2022-12-02T10_17_03_104Z-debug-0.log
         continue-on-error: true
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: check .npmrc
         run: |
