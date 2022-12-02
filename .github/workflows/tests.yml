@@ -29,6 +29,7 @@ jobs:
 
       - run: |
          npm ci
+         cat /home/runner/.npm/_logs/2022-12-02T10_17_03_104Z-debug-0.log
         continue-on-error: true
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
