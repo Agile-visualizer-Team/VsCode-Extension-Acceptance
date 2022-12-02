@@ -24,4 +24,4 @@ jobs:
           node-version: 16
       - run: npm install
     # Publishing on JFrog
-      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_node_modules/ avs_node_modules/visualizer-asp/
+      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/ avs_node_modules/visualizer-asp/
