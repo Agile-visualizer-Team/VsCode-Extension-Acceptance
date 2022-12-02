@@ -40,6 +40,7 @@ jobs:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: check .npmrc
         run: |
+          ls -a /home/runner/work/_temp/
           cat /home/runner/work/_temp/.npmrc
       - run: exit 0
         # cat ~/.npmrc
