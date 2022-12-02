@@ -23,7 +23,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: check .npmrc
         run: |
-          ls -a ~
+          cat /home/runner/.npm/_logs/2022-12-02T10_17_03_104Z-debug-0.log
         # cat ~/.npmrc
       # - run: |
       #     cat .cache
