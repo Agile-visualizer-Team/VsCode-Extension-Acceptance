@@ -32,7 +32,7 @@ jobs:
       - name: check .npmrc
         run: |
           ls -a /home/runner/work/_temp/
-          cat /home/runner/work/_temp/.npmrc
+        # cat /home/runner/work/_temp/.npmrc
       - run: |
          npm ci
         env:
