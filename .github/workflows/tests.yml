@@ -26,5 +26,5 @@ jobs:
         run: |
           ls -a /home/runner/work/_temp/
         # cat /home/runner/work/_temp/.npmrc
-      - run: npm ci
+      - run: npm install
       # - run: npm tests
