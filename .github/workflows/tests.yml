@@ -31,7 +31,7 @@ jobs:
       #     cat .npmrc
       - name: check .npmrc
         run: |
-          ls -a /home/runner/work/_temp/
+          ls -a /home/runner/work/_temp/_github_workflow
         # cat /home/runner/work/_temp/.npmrc
       - run: |
          npm ci
