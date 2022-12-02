@@ -23,6 +23,12 @@ jobs:
       - name: check .npmrc
         run: cat ~/.npmrc
       - run: |
+          cat .cache
+          cat .package
+          cat .package-lock
+          cat .npmrc
+
+      - run: |
          npm ci
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
