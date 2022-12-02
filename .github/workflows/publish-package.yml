@@ -23,6 +23,6 @@ jobs:
           npm install @agile-visualizer-team/visualizer-asp@latest
           npm install
       - name: check files
-        run: ls -a /home/runner/work/VsCode-Extension-Acceptance
+        run: ls -a /home/runner/work/VsCode-Extension-Acceptance/VsCode-Extension-Acceptance
     # Publishing on JFrog
-      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_releasable-npm/ node_modules/visualizer-asp/
+      # - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_releasable-npm/ node_modules/visualizer-asp/
