@@ -25,4 +25,4 @@ jobs:
       - name: check files
         run: ls -a /home/runner/work/VsCode-Extension-Acceptance/VsCode-Extension-Acceptance/node_modules/@agile-visualizer-team
     # Publishing on JFrog
-      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_releasable-npm/ node_modules/@agile-visualizer-team/visualizer-asp/
+      - run: npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/visualizer_asp_artifactory/ node_modules/@agile-visualizer-team/visualizer-asp

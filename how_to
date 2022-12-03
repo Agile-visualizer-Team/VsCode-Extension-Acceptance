@@ -1,2 +1,2 @@
-How to publish package -> npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/avs_node_modules/ avs_node_modules/visualizer-asp/
+How to publish package -> npm publish --registry https://agilevisualizerteam.jfrog.io/artifactory/api/npm/visualizer_asp_artifactory/ node_modules/@agile-visualizer-team/visualizer-asp
 How to install/update packages -> npm install @agile-visualizer-team/visualizer-asp@latest
