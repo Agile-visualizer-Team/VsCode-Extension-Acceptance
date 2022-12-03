@@ -1,5 +1,5 @@
 {
-  "name": "vscode-extension-acceptance",
+  "name": "@agilevisualizerteam/vscode-extension-acceptance",
   "version": "1.0.0",
   "description": "This is the repo for acceptance tests",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/visualizer-asp": "^0.0.3",
+    "@agile-visualizer-team/visualizer-asp": "^0.0.4",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "sinon": "^14.0.2"
