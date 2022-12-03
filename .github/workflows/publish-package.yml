@@ -22,6 +22,11 @@ jobs:
       - run: |
           npm install @agile-visualizer-team/visualizer-asp@latest
           npm install
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: change name project
+        run: ./change_name_organization_package.py node_modules/@agile-visualizer-team/visualizer-asp/package.json
       - name: check files
         run: ls -a /home/runner/work/VsCode-Extension-Acceptance/VsCode-Extension-Acceptance/node_modules/@agile-visualizer-team
     # Publishing on JFrog
