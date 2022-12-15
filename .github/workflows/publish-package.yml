@@ -2,7 +2,7 @@ name: publish in Artifact Repository Releasable
 run-name: publishing a new version
 on: 
   schedule:
-   - cron:  '30 5,17 * * *'
+   - cron:  '0 5,17 * * *'
   workflow_dispatch:
 
 jobs:
