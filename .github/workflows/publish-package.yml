@@ -1,5 +1,5 @@
-name: Publish in Artifact Repository Releasable
-run-name: Checking if acceptance tests pass
+name: publish in Artifact Repository Releasable
+run-name: publishing a new version
 on: 
   schedule:
    - cron:  '30 5,17 * * *'
