@@ -22,7 +22,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
+      - name: install last version of package
+        run: |
           npm install @agile-visualizer-team/visualizer-asp@latest
           npm install
-      # - run: npm tests
+      - name: acceptance test
+        run: npm run test
