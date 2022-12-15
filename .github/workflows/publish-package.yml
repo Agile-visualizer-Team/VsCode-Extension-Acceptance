@@ -2,7 +2,7 @@ name: Publish in Artifact Repository Releasable
 run-name: Checking if acceptance tests pass
 on: 
   schedule:
-    - 0 15,20 * * *
+   - cron:  '30 5,17 * * *'
   workflow_dispatch:
 
 jobs:
