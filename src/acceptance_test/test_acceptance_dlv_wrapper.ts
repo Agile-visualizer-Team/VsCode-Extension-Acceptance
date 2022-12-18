@@ -10,7 +10,7 @@ const dlvWrapper = new DLVWrapper()
 
 describe('acceptance test',  () => {
     //Parametrizing tests
-    it('write to stdout the correct representation of an AS', () => {
+    it('returns the correct representation of an AS', () => {
         let dlv_executable_stub = sinon.stub(dlvWrapper, "run_dlv");
         dlv_executable_stub.returns("DLV X.X.X\n\n{m(2), s(2,3)}\nCOST 1@1\n")
 
@@ -22,8 +22,8 @@ describe('acceptance test',  () => {
             asp_file: 'asp_file.asp',
         }
 
-        dlvWrapper.execute(argv);
-        expect(console_stub.calledOnceWithExactly(JSON.stringify([{ 'as': [ 'm(2)', 's(2,3)' ], 'cost': '1@1' }]))).to.be.true;
+        let res = dlvWrapper.execute(argv);
+        expect(res).to.be.equals(JSON.stringify([{ 'as': [ 'm(2)', 's(2,3)' ], 'cost': '1@1' }]));
         dlv_executable_stub.restore()
         console_stub.restore()
         

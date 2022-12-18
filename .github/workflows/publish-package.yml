@@ -32,4 +32,5 @@ jobs:
       - name: check files
         run: ls -a /home/runner/work/VsCode-Extension-Acceptance/VsCode-Extension-Acceptance/node_modules/@agile-visualizer-team
     # Publishing on JFrog
-      - run: npm publish node_modules/@agile-visualizer-team/visualizer-asp
+      - name: publish on JFrog
+        run: npm publish node_modules/@agile-visualizer-team/visualizer-asp
