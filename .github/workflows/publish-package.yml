@@ -21,7 +21,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
+      - name: install latest version
+        run: |
           npm install @agile-visualizer-team/visualizer-asp@latest
           npm install
       - uses: actions/setup-python@v4

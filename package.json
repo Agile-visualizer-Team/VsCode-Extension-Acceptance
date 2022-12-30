@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "This is the repo for acceptance tests",
   "main": "index.js",
+  "module": "script.mjs",
   "scripts": {
-    "test": "nyc mocha -r ts-node/register src/acceptance_test/test_*.ts"
+    "test": "nyc mocha -r ts-node/register src/acceptance_test/test_*",
+    "test_cri": "mocha -r ts-node/register './src/acceptance_test/test_acceptance_visualization_matrix.ts'",
+    "test_simo": "mocha -r ts-node/register './src/acceptance_test/test_acceptance_dlv_wrapper.ts'"
   },
   "repository": {
     "type": "git",
@@ -30,7 +33,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/visualizer-asp": "^0.1.0",
+    "@agile-visualizer-team/visualizer-asp": "^0.2.21",
     "@types/yargs": "^17.0.13",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
