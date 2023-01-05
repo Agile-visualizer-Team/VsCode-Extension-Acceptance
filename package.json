@@ -14,9 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/Agile-visualizer-Team/VsCode-Extension-Acceptance.git"
   },
-  "type":"module" ,
   "keywords": [],
-  "author": "",
+  "author": "Visualizer Asp team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Agile-visualizer-Team/VsCode-Extension-Acceptance/issues"
@@ -35,7 +34,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/visualizer-asp": "^0.4.10",
+    "@agile-visualizer-team/visualizer-asp": "^0.4.11",
     "@types/yargs": "^17.0.13",
     "ajv": "^8.11.2",
     "chai": "^4.3.7",
