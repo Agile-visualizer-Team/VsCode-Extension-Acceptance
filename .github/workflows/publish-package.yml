@@ -11,7 +11,7 @@ jobs:
     uses: Agile-visualizer-Team/VsCode-Extension-Acceptance/.github/workflows/tests.yml@main
     secrets:  inherit
 
-  publish-gpr:
+  publish-jfr:
     needs: build
     env:
       NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -29,9 +29,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: change name project
-        run: ./change_name_organization_package.py node_modules/@agile-visualizer-team/visualizer-asp/package.json
-      - name: check files
-        run: ls -a /home/runner/work/VsCode-Extension-Acceptance/VsCode-Extension-Acceptance/node_modules/@agile-visualizer-team
-    # Publishing on JFrog
+        run: ./change_name_organization_package.py node_modules/@agile-visualizer-team/visualizer-asp/package.json @agilevisualizerteam/visualizer-asp
+      # Publishing on JFrog
       - name: publish on JFrog
         run: npm publish node_modules/@agile-visualizer-team/visualizer-asp

@@ -4,12 +4,12 @@ import sys
 import json
 
 path_file = sys.argv[1]
-new_organization_name = "@agilevisualizerteam/visualizer-asp" 
+new = sys.argv[2]
 
 with open(path_file) as f:
    data = json.load(f)
 
-data["name"] = new_organization_name 
+data["name"] = new 
 
 with open(path_file, "w") as f:
     f.write(json.dumps(data))

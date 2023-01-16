@@ -6,7 +6,7 @@
   "module": "script.mjs",
   "scripts": {
     "test": "nyc mocha -r ts-node/register src/acceptance_test/test_*",
-    "test_visualization_matrix": "mocha -r ts-node/register './src/acceptance_test/1_test_acceptance_visualization_matrix.ts'",
+    "test_visualization_matrix": "mocha -r ts-node/register './src/acceptance_test/test_acceptance_visualization_matrix.ts'",
     "test_dlv_wrapper": "mocha -r ts-node/register './src/acceptance_test/test_acceptance_dlv_wrapper.ts'",
     "test_visualization_graph": "mocha -r ts-node/register './src/acceptance_test/test_acceptance_visualization_graph.ts'"
   },
@@ -34,8 +34,10 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/visualizer-asp": "^0.4.12",
+    "@agile-visualizer-team/visualizer-asp": "^1.1.2",
+    "@agilevisualizerteam/visualizer-asp": "^1.1.4",
     "@types/yargs": "^17.0.13",
+    "@vscode/vsce": "^2.16.0",
     "ajv": "^8.11.2",
     "canvas": "^2.10.2",
     "chai": "4.3.7",
@@ -46,6 +48,8 @@
     "readline-sync": "^1.4.10",
     "sinon": "^14.0.2",
     "table": "^6.8.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "yargs": "^17.6.2"
   }
 }
