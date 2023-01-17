@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@agile-visualizer-team/visualizer-asp": "^1.1.4",
+    "@agilevisualizerteam/visualizer-asp": "^1.1.5",
     "@types/yargs": "^17.0.13",
     "@vscode/vsce": "^2.16.0",
     "ajv": "^8.11.2",

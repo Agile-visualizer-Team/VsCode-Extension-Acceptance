@@ -28,9 +28,13 @@ jobs:
       - name: change name project
         run: ./change_name_organization_package.py node_modules/@agilevisualizerteam/visualizer-asp/package.json visualizer-asp
       # Publishing on Visual Studio Code Marketplace Place
-      - name: publish on VSC MP
+      - name: mv project
+        run: | 
+          mv node_modules/@agilevisualizerteam/visualizer-asp/ ~
+          cd ~/visualizer-asp  
+      - name: build
         run: |
-          cd node_modules/@agilevisualizerteam/visualizer-asp/
           ./install.sh
           ./compile.sh
-          vsce publish -p ${VSCODE_TOKEN}
+      - name: publish on VSC MP
+        run: vsce publish -p ${VSCODE_TOKEN}
