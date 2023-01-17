@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 18
       - name: install latest version
-        run: |
+        run: 
           npm install
       - uses: actions/setup-python@v4
         with:
