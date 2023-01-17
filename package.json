@@ -34,7 +34,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@agile-visualizer-team/visualizer-asp": "^1.1.2",
+    "@agile-visualizer-team/visualizer-asp": "^1.1.4",
     "@agilevisualizerteam/visualizer-asp": "^1.1.4",
     "@types/yargs": "^17.0.13",
     "@vscode/vsce": "^2.16.0",
