@@ -1,5 +1,5 @@
-name: publish on marketplace visualstudio
-run-name: publishing a new version on marketplace
+name: publish on Marketplace Visual Studio Code
+run-name: publishing a new version on Marketplace Visual Studio Code
 on: 
   # schedule:
   #  - cron:  '0 5,17 * * *'
@@ -28,7 +28,7 @@ jobs:
       - name: change name project
         run: ./change_name_organization_package.py node_modules/@agilevisualizerteam/visualizer-asp/package.json visualizer-asp
       # Publishing on Visual Studio Code Marketplace Place
-      - name: publish on VsCode MP
+      - name: publish on VSC MP
         run: |
           cd node_modules/@agilevisualizerteam/visualizer-asp/
           ./install.sh
