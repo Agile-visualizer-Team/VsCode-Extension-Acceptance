@@ -31,10 +31,9 @@ jobs:
       - name: mv project
         run: | 
           mv node_modules/@agilevisualizerteam/visualizer-asp/ ~
-          cd ~/visualizer-asp  
       - name: build
         run: |
-          ./install.sh
-          ./compile.sh
+          ~/visualizer-asp/./install.sh
+          ~/visualizer-asp/./compile.sh
       - name: publish on VSC MP
         run: vsce publish -p ${VSCODE_TOKEN}
