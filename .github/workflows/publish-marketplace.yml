@@ -37,4 +37,6 @@ jobs:
           ./install.sh
           ./compile.sh
       - name: publish on VSC MP
-        run: vsce publish -p ${VSCODE_TOKEN}
+        run: |
+          cd ~/visualizer-asp
+          vsce publish -p ${VSCODE_TOKEN}
