@@ -15,16 +15,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - name: check branch
-        run: echo "echo ${GITHUB_REF##*/}"
-      - name: check commit
-        run : git show $GITHUB_SHA
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - name: install latest version of package
-        run: |
-          npm install @agile-visualizer-team/visualizer-asp@latest
-          npm install
+        run: npm install
       - name: acceptance test
         run: npm run test
