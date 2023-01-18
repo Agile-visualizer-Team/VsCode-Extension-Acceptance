@@ -1,18 +1,18 @@
 name: publish in Artifact Repository Releasable
-run-name: publishing a new version
+run-name: publish in Artifact Repository Releasable
 on: 
   schedule:
    - cron:  '0 5,17 * * *'
   workflow_dispatch:
 
 jobs:
-  build:
+  acceptance-test:
     # Testing
     uses: Agile-visualizer-Team/VsCode-Extension-Acceptance/.github/workflows/tests.yml@main
     secrets:  inherit
 
   publish-jfr:
-    needs: build
+    needs: acceptance-test
     env:
       NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       JFROG_TOKEN: ${{secrets.JFROG_TOKEN}}
