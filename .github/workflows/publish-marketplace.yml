@@ -1,8 +1,8 @@
 name: publish on Marketplace Visual Studio Code
 run-name: publishing a new version on Marketplace Visual Studio Code
 on: 
-  # schedule:
-  #  - cron:  '0 0 1,14 * *'
+  schedule:
+   - cron:  '0 0 1,14 * *'
   workflow_dispatch:
 
 jobs:
